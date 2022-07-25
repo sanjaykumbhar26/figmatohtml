@@ -1221,10 +1221,18 @@ button:focus {
   }
 }
 
+@media (min-width: 1200px) {
+  .footer-inner .container {
+    max-width: 1110px;
+  }
+}
+
 @media (max-width: 767px) {
   .payment-icon {
     justify-content: flex-start;
   }
+
+
 }
 
 @media (max-width: 1024px) {
