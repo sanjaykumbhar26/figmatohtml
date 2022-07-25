@@ -1215,6 +1215,17 @@ button:focus {
 }
 
 /* Reposnisve Media  */
+@media (min-width: 960px) {
+  .footer-inner .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment-icon {
+    justify-content: flex-start;
+  }
+}
 
 @media (max-width: 1024px) {
 
@@ -1532,16 +1543,14 @@ button:focus {
   }
 
   .productsSection .products-img {
-    height: 260px;
+    height: auto;
   }
 
   .productsSection .col-md-4:last-child .products-item {
     margin-bottom: 0px;
   }
 
-  .payment-icon {
-    justify-content: flex-start;
-  }
+
 
   .copy-right {
     min-height: 68px;
