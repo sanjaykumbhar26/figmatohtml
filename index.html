@@ -89,7 +89,7 @@
                                     <li><a class="dropdown-item" href="#">Account</a></li>
                                 </ul>
                             </div>
-                            <a class="link-item m-hidden" href="#">
+                            <a class="link-item m-hidden" data-bs-toggle="modal" data-bs-target="#modalSearch" href="#">
                                 <img src="assets/images/search.svg"> Search</a>
                             <a class="link-item m-hidden" href="#">
                                 <img src="assets/images/shopping.svg"> Shopping bag
@@ -832,6 +832,179 @@
         </div>
 
     </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xxl-down">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="modal-search">
+                        <div class="modal-search-header">
+                            <div class="search-field">
+                                <div class="input-group field-icon">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-text" id="basic-addon2">
+                                        <img alt="search" src="assets/images/search-filter.svg">
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close modal-search-icon" data-bs-dismiss="modal">
+                                <img alt="search" src="assets/images/icons-close.svg">
+                            </button>
+                        </div>
+                        <div class="modal-search-result">
+                            <div class="Shop-by-category">
+                                <h1>Shop by category</h1>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="category-item">
+                                            <div class="category-img">
+                                                <img alt="slider" src="assets/images/slider/women-one.png">
+                                            </div>
+                                            <div class="category-header">
+                                                <h2>Women</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="category-item">
+                                            <div class="category-img">
+                                                <img alt="slider" src="assets/images/slider/menu-one.png">
+                                            </div>
+                                            <div class="category-header">
+                                                <h2>Men</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="category-item">
+                                            <div class="category-img">
+                                                <img alt="slider" src="assets/images/slider/kids-one.jpg">
+                                            </div>
+                                            <div class="category-header">
+                                                <h2>Kids</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <label class="priceTag priceNew">Save 10%</label>
+                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                                            <img alt="slider" src="assets/images/product1.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <label class="priceTag priceNew">Save 10%</label>
+                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                                            <img alt="slider" src="assets/images/product2.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <label class="priceTag priceNew">Save 10%</label>
+                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                                            <img alt="slider" src="assets/images/product3.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
+                                            <img alt="slider" src="assets/images/product4.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
+                                            <img alt="slider" src="assets/images/product2.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
+                                            <img alt="slider" src="assets/images/product1.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
+                                            <img alt="slider" src="assets/images/product3.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="browseproduct-item">
+                                        <div class="browseproduct-img">
+                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
+                                            <img alt="slider" src="assets/images/product4.png">
+                                        </div>
+                                        <div class="browseproduct-header">
+                                            <h2>Hooded sweatshirt dress</h2>
+                                            <p>KWD 6.990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="modal-action">
+                                        <button type="button" class="btn btn-secondary">
+                                            View all results
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.js"></script>

@@ -99,3 +99,46 @@ $(window).load(function () {
         $(".preloader").delay(500).fadeOut("slow");
     }
 });
+
+/*--------------------------------------------------------
+/ 6. form header
+/----------------------------------------------------------*/
+
+$('#email1').keyup(function () {
+    if ($(this).val() == '') {
+        jQuery('#button').addClass('btn-info');
+        jQuery('#button').removeClass('btn-secondary');
+    } else {
+        jQuery('#button').addClass('btn-secondary');
+        jQuery('#button').removeClass('btn-info');
+    }
+});
+
+$('.button-submit').click(function () {
+    jQuery('.email-block, .header-text, .createAccount').addClass('d-none');
+    jQuery('.header-text-d-none').removeClass('header-text-d-none');
+    $(".button-submit").text('Sign In');
+});
+
+
+const togglePassword = document.querySelector('#togglePassword');
+const togglePasswordnew = document.querySelector('#togglePasswordnew');
+const password = document.querySelector('#id_password');
+const passwordNew = document.querySelector('#id_passwordnew');
+
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+togglePasswordnew.addEventListener('click', function (e) {
+    // toggle the type attribute
+
+    const typenew = passwordNew.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordNew.setAttribute('type', typenew);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
