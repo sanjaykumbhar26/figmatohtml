@@ -1530,6 +1530,11 @@ label.priceTag:before {
   display: none;
 }
 
+.login-section .btn-secondary {
+  display: initial;
+  justify-content: center;
+}
+
 /*------------------------------------------------------
 /  10.brand Section
 /------------------------------------------------------*/
