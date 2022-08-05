@@ -9,9 +9,11 @@
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
@@ -322,7 +324,7 @@
                                 <img src="assets/images/shopping.svg"> Shopping bag
                             </a>
                             <div class="account-icon">
-                                <a class="link-item d-hidden " href="#">
+                                <a class="link-item d-hidden" href="#">
                                     <img src="assets/images/user-icon.svg"></a>
                                 <a class="link-item d-hidden" href="#">
                                     <img src="assets/images/shopping_bag.svg">
@@ -337,7 +339,7 @@
     <!-- END: Header Section -->
 
     <!-- BEGIN: Topbar Section mobile -->
-    <section class="topBarSection d-hidden ">
+    <section class="topBarSection d-none">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -358,7 +360,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Brands</li>
+                            <li class="breadcrumb-item active" aria-current="page">Kids</li>
                         </ol>
                     </nav>
                 </div>
@@ -367,155 +369,254 @@
     </section>
     <!-- END: breadcrumb -->
 
-    <!-- BEGIN: brand  -->
-    <section class="brand-section">
+    <!-- BEGIN: Product List  -->
+    <section class="product-list-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2 class="second-header">All your favorite lokal brands in one place</h2>
+                <div class="col-lg-12">
+                    <div class="product-banner" style="background-image:url(assets/images/kids-hero.png)">
+
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="brands-list">
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand1.png">
+                <div class="col-lg-12">
+                    <div class="product-page-header">
+                        <h1>Clothing</h1>
+                        <div class="d-hidden productFilterMobileBlock isSticky">
+                            <div class="productFilterMobile">
+                                <div class="row ">
+                                    <div class="col">
+                                        <div class="productCate category select-icon">
+                                            <select name="productFilter">
+                                                <option data-display="Category" style="display:none;" value=""></option>
+                                                <option value="1">Women</option>
+                                                <option value="2">Men</option>
+                                                <option value="3">Kids</option>
+                                                <option value="4">Brands</option>
+                                                <option value="5">New Arrivals</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <a class="filter">
+                                            Filter & Sort <img alt="filter" src="assets/images/filter-sort.svg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <h2>Brand name</h2>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand2.png">
+                        <div class="m-hidden">
+                            <div class="productFilterRow">
+                                <div class="productFiltering">
+                                    <div class="productSelect category select-icon">
+                                        <select name="productFilter">
+                                            <option data-display="Category" style="display:none;" value=""></option>
+                                            <option value="1">Women</option>
+                                            <option value="2">Men</option>
+                                            <option value="3">Kids</option>
+                                            <option value="4">Brands</option>
+                                            <option value="5">New Arrivals</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect brand select-icon">
+                                        <select name="productFilter">
+                                            <option value="">Brand</option>
+                                            <option value="1">Adidas</option>
+                                            <option value="2">Nike</option>
+                                            <option value="3">Brand name</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect brand select-icon">
+                                        <select name="productFilter">
+                                            <option value="">Product type</option>
+                                            <option value="1">Women</option>
+                                            <option value="2">Men</option>
+                                            <option value="3">Kids</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect color select-icon">
+                                        <div class="nice-select color-select">
+                                            <span class="current">Color</span>
+                                            <ul class="list">
+                                                <li class="option ">
+                                                    <div class="color-item white"><span></span>white </div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item black"><span></span>Black </div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item turquoise"><span></span>Turquoise</div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item red"><span></span>Red</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="productShort">
+                                    <div class="product-sort">
+                                        <div class="nice-select sort-select">
+                                            <span class="current">Sort by</span>
+                                            <ul class="list">
+                                                <li class="option ">
+                                                    <input type="radio" id="f-option" name="selector">
+                                                    <label for="f-option">Recommended</label>
+                                                    <div class="check"></div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="s-option" name="selector">
+                                                    <label for="s-option">New Arrivals</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="t-option" name="selector">
+                                                    <label for="t-option">Cats</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="p-option" name="selector">
+                                                    <label for="p-option">Price High to Low</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="pl-option" name="selector">
+                                                    <label for="pl-option">Price Low to High</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h2>Brand name</h2>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand3.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <label class="priceTag price">Save 10%</label>
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt="slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand4.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand5.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand1.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <label class="priceTag sold">Sold out</label>
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand2.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand3.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand4.png">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt="slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand5.png">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand1.png">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                                <img src="assets/images/brand/brand2.png">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
-                        </div>
-                        <div class="brand-item">
-                            <div class="brand-img">
-                            </div>
-                            <h2>Brand name</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt="slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END: brand -->
+    <!-- END: Product List -->
 
     <footer>
         <div class="footer-inner m-hidden">
@@ -932,6 +1033,9 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+
+
+
     <!-- scripts -->
     <script src="assets/js/scripts.js"></script>
 </body>

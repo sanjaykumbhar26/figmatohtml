@@ -104,13 +104,13 @@ $(window).load(function () {
 / 6. form header
 /----------------------------------------------------------*/
 
-$('#email1').keyup(function () {
+$('#email1, .input-fill').keyup(function () {
     if ($(this).val() == '') {
-        jQuery('#button').addClass('btn-info');
-        jQuery('#button').removeClass('btn-secondary');
+        jQuery('#button,.button-fill').addClass('btn-info');
+        jQuery('#button,.button-fill').removeClass('btn-secondary');
     } else {
-        jQuery('#button').addClass('btn-secondary');
-        jQuery('#button').removeClass('btn-info');
+        jQuery('#button,.button-fill').addClass('btn-secondary');
+        jQuery('#button,.button-fill').removeClass('btn-info');
     }
 });
 
@@ -120,25 +120,76 @@ $('.button-submit').click(function () {
     $(".button-submit").text('Sign In');
 });
 
+window.onload = function () {
+    const togglePassword = document.querySelector('#togglePassword');
+    const togglePasswordnew = document.querySelector('#togglePasswordnew');
+    const password = document.querySelector('#id_password');
+    const passwordNew = document.querySelector('#id_passwordnew');
 
-const togglePassword = document.querySelector('#togglePassword');
-const togglePasswordnew = document.querySelector('#togglePasswordnew');
-const password = document.querySelector('#id_password');
-const passwordNew = document.querySelector('#id_passwordnew');
+    togglePassword.addEventListener('click', function () {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
 
-togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
+    togglePasswordnew.addEventListener('click', function () {
+        // toggle the type attribute
+
+        const typenew = passwordNew.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordNew.setAttribute('type', typenew);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+}
+
+/*------------------------------------------------------
+  02. Nice Selects
+//------------------------------------------------------*/
+$(document).ready(function () {
+    $('select:not(.ignore)').niceSelect();
 });
 
-togglePasswordnew.addEventListener('click', function (e) {
-    // toggle the type attribute
-
-    const typenew = passwordNew.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordNew.setAttribute('type', typenew);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
+var html = ["demo"];
+$('#color_select option').each(function (i) {
+    console.log('demo');
+    html.push('<div' + $(this).val() + '>' + $(this).text() + '</div>');
 });
+
+
+/*--------------------------------------------------------
+    / 19. Sticky Header
+/---------------------------------------------------------*/
+$(window).on('scroll', function () {
+    var heights = $(window).height();
+    if ($(window).scrollTop() > heights) {
+        $(".isSticky").addClass('fixedHeader animated slideInDown');
+    } else {
+        $(".isSticky").removeClass('fixedHeader animated slideInDown');
+    }
+});
+
+
+/*--------------------------------------------------------
+    / 19. hamburger-menu
+/---------------------------------------------------------*/
+(function () {
+    $('.hamburger-menu').on('click', function () {
+        $('.bar').toggleClass('animate');
+        var mobileNav = $('.mobile-nav');
+        mobileNav.toggleClass('hide show');
+    })
+})();
+
+
+/*--------------------------------------------------------
+    / 19. account-menu
+/---------------------------------------------------------*/
+(function () {
+    $('.account-menu').on('click', function () {
+        $('.bar2').toggleClass('animate');
+        var mobileNav = $('.account-mobile-nav');
+        mobileNav.toggleClass('hide show');
+    })
+})();
