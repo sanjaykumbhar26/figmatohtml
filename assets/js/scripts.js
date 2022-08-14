@@ -24,6 +24,7 @@ $('#owl-carousel-slider').owlCarousel({
     }
 })
 
+
 /*------------------------------------------------------
 /  02. owlcarousel Section
 /------------------------------------------------------*/
@@ -127,10 +128,8 @@ window.onload = function () {
     const passwordNew = document.querySelector('#id_passwordnew');
 
     togglePassword.addEventListener('click', function () {
-        // toggle the type attribute
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
         password.setAttribute('type', type);
-        // toggle the eye slash icon
         this.classList.toggle('fa-eye-slash');
     });
 
@@ -193,3 +192,21 @@ $(window).on('scroll', function () {
         mobileNav.toggleClass('hide show');
     })
 })();
+
+
+/*------------------------------------------------------
+/  sp-wrap
+/------------------------------------------------------*/
+
+$('.sp-wrap').smoothproducts();
+
+/*------------------------------------------------------
+/  openCart
+/------------------------------------------------------*/
+
+function openCart() {
+    document.getElementById("Cart").style.display = "block";
+}
+function closeCart() {
+    document.getElementById("Cart").style.display = "none";
+}
