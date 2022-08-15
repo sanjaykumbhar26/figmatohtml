@@ -4231,6 +4231,23 @@ input[type='checkbox']:checked {
   padding: 16px 0;
 }
 
+.rightMenu-scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.close_slide {
+  position: absolute;
+  right: 20px;
+}
+
+.right-ch-sideBar {
+  padding: 0px 20px;
+  overflow-y: auto;
+}
+
 @keyframes animateright {
   from {
     right: -300px;
