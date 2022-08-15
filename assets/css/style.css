@@ -4248,6 +4248,14 @@ input[type='checkbox']:checked {
   overflow-y: auto;
 }
 
+.product-details-section .owl-dots {
+  position: absolute;
+  z-index: 111;
+  margin-bottom: 10px;
+  bottom: 1px;
+  width: 100%;
+}
+
 @keyframes animateright {
   from {
     right: -300px;
@@ -4344,6 +4352,10 @@ input[type='checkbox']:checked {
 
   .side-footer .col-lg-6 .cart-total {
     text-align: left;
+  }
+
+  .product-information {
+    margin-top: 30px;
   }
 
 

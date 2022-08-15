@@ -25,6 +25,28 @@ $('#owl-carousel-slider').owlCarousel({
 })
 
 
+$('#owl-carousel-product').owlCarousel({
+    loop: true,
+    navigation: false,
+    margin: 10,
+    dots: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+        },
+        600: {
+            items: 1,
+            nav: false,
+        },
+        1025: {
+            items: 1
+        }
+    }
+})
+
+
 /*------------------------------------------------------
 /  02. owlcarousel Section
 /------------------------------------------------------*/
