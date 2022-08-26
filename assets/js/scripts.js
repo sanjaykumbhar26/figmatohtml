@@ -47,6 +47,7 @@ $('#owl-carousel-product').owlCarousel({
 })
 
 
+
 /*------------------------------------------------------
 /  02. owlcarousel Section
 /------------------------------------------------------*/
@@ -95,7 +96,26 @@ $('#browseProductsSection-slider').owlCarousel({
             items: 4
         }
     }
-})
+});
+
+
+/*------------------------------------------------------
+/ heart icon 
+/------------------------------------------------------*/
+
+$(document).ready(function () {
+    $(".like-icon").click(function () {
+        var ele = $(this);
+        // ele is the element you clicked on
+        if ($(ele).hasClass("liked")) {
+            $(ele).html("<img src='assets/images/heart.svg'>");
+            $(ele).removeClass("liked");
+        } else {
+            $(ele).html("<lottie-player  class='lottie-heart-icon' src='assets/js/aniamtion-icon.json' background='transparent' speed='1' style='width: 90px; height: 90px;'loop autoplay></lottie-player>");
+            $(ele).addClass("liked");
+        }
+    });
+});
 
 
 /*--------------------------------------------------------
@@ -232,3 +252,5 @@ function openCart() {
 function closeCart() {
     document.getElementById("Cart").style.display = "none";
 }
+
+

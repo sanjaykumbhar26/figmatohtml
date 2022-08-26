@@ -574,7 +574,7 @@ button:focus {
   width: 100%;
   box-shadow: none;
   background-color: #fff;
-  z-index: 111;
+  z-index: 1111;
   border-bottom: solid 2px #E8EDF1;
 }
 
@@ -584,7 +584,7 @@ button:focus {
   top: 57px;
   width: 100%;
   background-color: #fff;
-  z-index: 111;
+  z-index: 11;
   padding: 20px 10px 0;
 }
 
@@ -1643,6 +1643,7 @@ label.priceTag:before {
 
 .wishlist-section .browseproduct-item {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .wishlist-section h2.second-header {
@@ -1850,6 +1851,7 @@ label.priceTag:before {
 
 .modal-search-result .browseproduct-item {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .modal-search .modal-action {
@@ -2468,6 +2470,7 @@ input[type='checkbox']:checked {
 
 .product-list-section .browseproduct-item {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .productFilterRow {
@@ -3943,6 +3946,16 @@ input[type='checkbox']:checked {
 
 .social-share-link a {
   margin-right: 16px;
+  text-decoration: none;
+}
+
+.social-share-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-share-link svg:hover path {
+  fill: #009CA1;
 }
 
 /*------------ Product Thumb Zoom ------------------*/
@@ -4496,7 +4509,7 @@ input[type='checkbox']:checked {
   font-size: 12.8px;
   line-height: 19px;
   color: #1D4F74;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .payment-footer p a {
@@ -4715,11 +4728,41 @@ input[type='checkbox']:checked {
 }
 
 
+.account-section-mobile {
+  display: none;
+}
+
 
 @media (max-width: 767px) {
+  .sticky-mobile {
+    position: sticky;
+    bottom: 0px;
+  }
+
+  .account-section-desktop {
+    display: none;
+  }
+
+  .cart-items-list {
+    margin-top: 20px;
+  }
+
+  .account-section-mobile {
+    display: block;
+  }
+
 
   .cart-item-img {
     margin-right: 10px;
+  }
+
+  .w3-ch-sideBar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .product-field .col-md-6:first-child {
+    margin-bottom: 30px;
   }
 
   .side-footer .col-lg-6 .cart-total {
@@ -4730,7 +4773,9 @@ input[type='checkbox']:checked {
     margin-top: 30px;
   }
 
-
+  .how-can-we-help {
+    margin-bottom: 20px;
+  }
 
   .cart-item {
     flex-direction: column;
@@ -4803,6 +4848,15 @@ input[type='checkbox']:checked {
 @media (max-width: 1024px) {
   .page-header {
     min-height: 80px;
+  }
+
+
+  .how-can-we-help {
+    margin-bottom: 20px;
+  }
+
+  .category-item {
+    margin-bottom: 20px;
   }
 
   .page-header h1 {
@@ -5389,4 +5443,66 @@ input[type='checkbox']:checked {
     max-height: 90vh;
     margin-top: 10px;
   }
+}
+
+.modal-fullscreen .modal-content {
+  height: auto;
+  min-height: 100%;
+}
+
+.heart-icon {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.heart-icon .lottie-heart-icon {
+  right: -25px;
+  position: absolute;
+  top: -30px;
+}
+
+.modalFilter-header {
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  margin-top: 0;
+  padding: 20px 0;
+  position: relative;
+}
+
+.modalFilter .product-sort .nice-select {
+  width: 100%;
+}
+
+.modalFilter .modal-search {
+  padding-top: 20px;
+  flex-direction: column;
+  display: flex;
+}
+
+.modalFilter .productSelect .nice-select {
+  min-width: 100%;
+}
+
+.modalFilter .productSelect {
+  margin-top: 20px;
+}
+
+.productSelect-action {
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+.modalFilter-header .modal-search-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.modalFilter-header img {
+  height: 37px;
 }
