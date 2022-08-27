@@ -2433,7 +2433,7 @@ input[type='checkbox']:checked {
 .account-link-dropdown ul li a {
   font-style: normal;
   font-weight: 400;
-  font-size: 12.8px;
+  font-size: 14px;
   line-height: 19px;
   color: #1D4F74;
   display: flex;
@@ -3022,13 +3022,14 @@ input[type='checkbox']:checked {
 
 .mobile-nav {
   background: #FFFFFF;
-  position: absolute;
   top: 0;
   width: 100vw;
   height: 100vh;
   text-align: center;
   transition: .2s ease;
-  z-index: 11;
+  z-index: 11111;
+  position: fixed;
+  top: 0;
 }
 
 .account-mobile-nav {
@@ -4133,6 +4134,7 @@ input[type='checkbox']:checked {
   background: #444;
 }
 
+
 .addbag-table {
   font-weight: 400;
   font-size: 12.8px;
@@ -4871,7 +4873,16 @@ input[type='checkbox']:checked {
   }
 
   .mobile-nav-logo {
-    display: block;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    justify-content: center;
+  }
+
+  .mobile-nav .hamburger-menu {
+    position: absolute;
+    left: 10px;
+    top: 23px;
   }
 
   .account-menu .bar2.animate {
