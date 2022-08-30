@@ -5517,3 +5517,7 @@ input[type='checkbox']:checked {
 .modalFilter-header img {
   height: 37px;
 }
+
+.stop-scroll {
+  overflow: hidden;
+}

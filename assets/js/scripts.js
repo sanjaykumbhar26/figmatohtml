@@ -217,9 +217,12 @@ $(window).on('scroll', function () {
 /---------------------------------------------------------*/
 (function () {
     $('.hamburger-menu').on('click', function () {
+
         $('.bar').toggleClass('animate');
         var mobileNav = $('.mobile-nav');
+        var mobileBody = $('body');
         mobileNav.toggleClass('hide show');
+        mobileBody.toggleClass('stop-scroll');
     })
 })();
 
