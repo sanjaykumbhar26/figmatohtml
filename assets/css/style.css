@@ -2432,8 +2432,8 @@ input[type='checkbox']:checked {
 
 .account-link-dropdown ul li a {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 19px;
   color: #1D4F74;
   display: flex;
@@ -4736,10 +4736,25 @@ input[type='checkbox']:checked {
 
 
 @media (max-width: 767px) {
-  .sticky-mobile {
-    position: sticky;
-    bottom: 0px;
+  .payment-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
   }
+
+  .payment-action {}
+
+  .payment-action .sticky-mobile {
+    position: fixed;
+    bottom: 40px;
+    z-index: 1;
+    max-width: 500px;
+  }
+
+
 
   .account-section-desktop {
     display: none;
@@ -5310,6 +5325,10 @@ input[type='checkbox']:checked {
     border-top: solid 1px #E8EDF1;
   }
 
+  .faq-accordion-block .accordion-item:not(:first-of-type) {
+    border-top: none;
+  }
+
   .footer-link ul li:first-child {
     margin-top: 0;
   }
@@ -5520,4 +5539,8 @@ input[type='checkbox']:checked {
 
 .stop-scroll {
   overflow: hidden;
+}
+
+.payment-action {
+  position: relative;
 }
