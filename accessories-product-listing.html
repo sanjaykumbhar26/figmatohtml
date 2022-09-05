@@ -9,9 +9,11 @@
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
@@ -74,7 +76,8 @@
                                                                         <a href="#">Clothes</a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#">Accessories</a>
+                                                                        <a
+                                                                            href="accessories-product-listing.html">Accessories</a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -171,19 +174,25 @@
                                         </div>
                                     </div> <!-- dropdown-mega-menu.// -->
                                 </li>
-                                <li class="nav-item dropdown has-megamenu"><a data-bs-toggle="dropdown" href="#">Men</a>
+                                <li class="nav-item dropdown has-megamenu"><a href="men-product-listing.html">Men</a>
 
                                 </li>
-                                <li><a href="#">Kids</a></li>
-                                <li><a href="#">Brands</a></li>
+                                <li><a href="kids-product-listing.html">Kids</a></li>
+                                <li><a href="brands-product-listing.html">Brands</a></li>
                                 <li><a href="#">New Arrivals</a></li>
                             </ul>
                         </nav>
                         <div class="nav-btn">
-                            <a href="javascript:void(0);" class="menuToggler d-hidden">
-                                <img alt="menu" src="assets/images/hamburger-menu.svg">
-                            </a>
-                            <a href="#" class="d-hidden"><img src="assets/images/icons-search.svg"></a>
+                            <div class="d-hidden">
+                                <div class="mobile">
+                                    <div class="hamburger-menu">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSearch" class="d-hidden">
+                                <img src="assets/images/icons-search.svg"></a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-2 col-md-2 col-4">
@@ -241,7 +250,7 @@
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
                                                                 d="M4.00065 0.333008C1.98146 0.333008 0.333984 1.98049 0.333984 3.99967C0.333984 5.36506 1.3632 6.65064 2.61784 7.96908C3.87248 9.28751 5.41678 10.6228 6.64714 11.8532C6.74091 11.9469 6.86807 11.9996 7.00065 11.9996C7.13324 11.9996 7.2604 11.9469 7.35417 11.8532C8.58453 10.6228 10.1288 9.28751 11.3835 7.96908C12.6381 6.65064 13.6673 5.36506 13.6673 3.99967C13.6673 1.98049 12.0198 0.333008 10.0007 0.333008C8.84184 0.333008 7.83292 0.955171 7.00065 2.01204C6.16838 0.955171 5.15946 0.333008 4.00065 0.333008ZM4.00065 1.33301C4.97684 1.33301 5.78942 1.85247 6.57812 3.09994C6.62323 3.17119 6.68561 3.22988 6.75949 3.27055C6.83336 3.31122 6.91632 3.33255 7.00065 3.33255C7.08498 3.33255 7.16794 3.31122 7.24181 3.27055C7.31569 3.22988 7.37808 3.17119 7.42318 3.09994C8.21188 1.85247 9.02446 1.33301 10.0007 1.33301C11.4795 1.33301 12.6673 2.52086 12.6673 3.99967C12.6673 4.80096 11.8632 6.01538 10.6595 7.28027C9.56185 8.43374 8.19742 9.63883 7.00065 10.8057C5.80388 9.63883 4.43945 8.43374 3.3418 7.28027C2.1381 6.01538 1.33398 4.80096 1.33398 3.99967C1.33398 2.52086 2.52184 1.33301 4.00065 1.33301Z"
-                                                                fill="#1D4F74" />
+                                                                fill="#1D4F74"></path>
                                                         </svg>
                                                     </div>
                                                     <label>Wishlist</label>
@@ -306,7 +315,7 @@
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
                                                                 d="M1.83333 0C0.826742 0 0 0.826742 0 1.83333V10.1667C0 11.1733 0.826742 12 1.83333 12H7.83333C8.83992 12 9.66667 11.1733 9.66667 10.1667C9.6676 10.1004 9.65536 10.0346 9.63066 9.97314C9.60595 9.91166 9.56927 9.8557 9.52275 9.80852C9.47622 9.76133 9.42079 9.72386 9.35966 9.69829C9.29853 9.67272 9.23293 9.65955 9.16667 9.65955C9.1004 9.65955 9.0348 9.67272 8.97367 9.69829C8.91255 9.72386 8.85711 9.76133 8.81059 9.80852C8.76406 9.8557 8.72738 9.91166 8.70268 9.97314C8.67797 10.0346 8.66573 10.1004 8.66667 10.1667C8.66667 10.6327 8.29941 11 7.83333 11H1.83333C1.36726 11 1 10.6327 1 10.1667V1.83333C1 1.36726 1.36726 1 1.83333 1H7.83333C8.29941 1 8.66667 1.36726 8.66667 1.83333C8.66573 1.89959 8.67797 1.96537 8.70268 2.02685C8.72738 2.08834 8.76406 2.1443 8.81059 2.19148C8.85711 2.23867 8.91255 2.27614 8.97367 2.30171C9.0348 2.32729 9.1004 2.34045 9.16667 2.34045C9.23293 2.34045 9.29853 2.32729 9.35966 2.30171C9.42079 2.27614 9.47622 2.23867 9.52275 2.19148C9.56927 2.1443 9.60595 2.08834 9.63066 2.02685C9.65536 1.96537 9.6676 1.89959 9.66667 1.83333C9.66667 0.826742 8.83992 0 7.83333 0H1.83333ZM9.16146 3.16146C9.06195 3.16148 8.96471 3.19119 8.88219 3.24679C8.79966 3.30239 8.7356 3.38134 8.6982 3.47356C8.6608 3.56577 8.65176 3.66704 8.67223 3.76442C8.69271 3.86179 8.74178 3.95085 8.81315 4.02018L10.293 5.5H3.16667C3.10041 5.49906 3.03463 5.5113 2.97315 5.53601C2.91166 5.56072 2.8557 5.5974 2.80852 5.64392C2.76133 5.69044 2.72386 5.74588 2.69829 5.80701C2.67272 5.86814 2.65955 5.93374 2.65955 6C2.65955 6.06626 2.67272 6.13186 2.69829 6.19299C2.72386 6.25412 2.76133 6.30956 2.80852 6.35608C2.8557 6.4026 2.91166 6.43928 2.97315 6.46399C3.03463 6.4887 3.10041 6.50094 3.16667 6.5H10.293L8.81315 7.97982C8.76517 8.02589 8.72686 8.08107 8.70046 8.14214C8.67407 8.2032 8.66013 8.26892 8.65945 8.33544C8.65878 8.40196 8.67138 8.46794 8.69653 8.52953C8.72167 8.59112 8.75885 8.64707 8.80589 8.69411C8.85293 8.74115 8.90888 8.77833 8.97047 8.80347C9.03206 8.82862 9.09804 8.84122 9.16456 8.84055C9.23108 8.83987 9.2968 8.82593 9.35786 8.79954C9.41893 8.77315 9.47411 8.73483 9.52018 8.68685L11.8535 6.35352C11.9472 6.25974 11.9999 6.13259 11.9999 6C11.9999 5.86741 11.9472 5.74026 11.8535 5.64648L9.52018 3.31315C9.47358 3.26516 9.41781 3.227 9.3562 3.20094C9.29458 3.17489 9.22836 3.16146 9.16146 3.16146Z"
-                                                                fill="#1D4F74" />
+                                                                fill="#1D4F74"></path>
                                                         </svg>
                                                     </div>
                                                     <label>Logout</label>
@@ -322,8 +331,11 @@
                                 <img src="assets/images/shopping.svg"> Shopping bag
                             </a>
                             <div class="account-icon">
-                                <a class="link-item d-hidden " href="#">
-                                    <img src="assets/images/user-icon.svg"></a>
+                                <a class="link-item d-hidden" href="#">
+                                    <span class="account-menu">
+                                        <img src="assets/images/user-icon.svg">
+                                    </span>
+                                </a>
                                 <a class="link-item d-hidden" href="#">
                                     <img src="assets/images/shopping_bag.svg">
                                 </a>
@@ -349,23 +361,6 @@
         </div>
     </section>
     <!-- END: Topbar Section -->
-
-    <!-- BEGIN: breadcrumb -->
-    <section class="breadcrumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About us</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END: breadcrumb -->
 
     <!-- menu  -->
     <div class="mobile-nav hide">
@@ -393,13 +388,13 @@
                                             <li>
                                                 <a href="#!">
                                                     Clothes
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#!">
                                                     Accessories
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                         </ul>
@@ -422,13 +417,13 @@
                                             <li>
                                                 <a href="#!">
                                                     Clothes
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#!">
                                                     Accessories
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                         </ul>
@@ -451,13 +446,13 @@
                                             <li>
                                                 <a href="#!">
                                                     Clothes
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#!">
                                                     Accessories
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                         </ul>
@@ -480,13 +475,13 @@
                                             <li>
                                                 <a href="#!">
                                                     Clothes
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#!">
                                                     Accessories
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                         </ul>
@@ -509,13 +504,13 @@
                                             <li>
                                                 <a href="#!">
                                                     Clothes
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#!">
                                                     Accessories
-                                                    <img src="/assets/images/icon-left.svg">
+                                                    <img src="assets/images/icon-left.svg">
                                                 </a>
                                             </li>
                                         </ul>
@@ -653,230 +648,264 @@
         </div>
     </div>
 
-    <!-- BEGIN: page   -->
-    <section class="page-section">
+    <!-- BEGIN: breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Accessories</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: breadcrumb -->
+
+    <!-- BEGIN: Product List  -->
+    <section class="product-list-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="page-header">
-                        <h1>Delivery, Refunds & Returns</h1>
+                    <div class="product-page-header">
+                        <h1 class="mt-40">Adidas (100)</h1>
+                        <div class="d-hidden productFilterMobileBlock isSticky">
+                            <div class="productFilterMobile">
+                                <div class="row ">
+                                    <div class="col">
+                                        <div class="productCate category select-icon">
+                                            <select name="productFilter">
+                                                <option data-display="Category" style="display:none;" value=""></option>
+                                                <option value="1">Women</option>
+                                                <option value="2">Men</option>
+                                                <option value="3">Kids</option>
+                                                <option value="4">Brands</option>
+                                                <option value="5">New Arrivals</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <a class="filter">
+                                            Filter & Sort <img alt="filter" src="assets/images/filter-sort.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-hidden">
+                            <div class="productFilterRow">
+                                <div class="productFiltering">
+                                    <div class="productSelect category select-icon">
+                                        <select name="productFilter">
+                                            <option data-display="Category" style="display:none;" value=""></option>
+                                            <option value="1">Women</option>
+                                            <option value="2">Men</option>
+                                            <option value="3">Kids</option>
+                                            <option value="4">Brands</option>
+                                            <option value="5">New Arrivals</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect brand select-icon">
+                                        <select name="productFilter">
+                                            <option value="">Brand</option>
+                                            <option value="1">Adidas</option>
+                                            <option value="2">Nike</option>
+                                            <option value="3">Brand name</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect brand select-icon">
+                                        <select name="productFilter">
+                                            <option value="">Product type</option>
+                                            <option value="1">Women</option>
+                                            <option value="2">Men</option>
+                                            <option value="3">Kids</option>
+                                        </select>
+                                    </div>
+                                    <div class="productSelect color select-icon">
+                                        <div class="nice-select color-select">
+                                            <span class="current">Color</span>
+                                            <ul class="list">
+                                                <li class="option ">
+                                                    <div class="color-item white"><span></span>white </div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item black"><span></span>Black </div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item turquoise"><span></span>Turquoise</div>
+                                                </li>
+                                                <li class="option">
+                                                    <div class="color-item red"><span></span>Red</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="productShort">
+                                    <div class="product-sort">
+                                        <div class="nice-select sort-select">
+                                            <span class="current">Sort by</span>
+                                            <ul class="list">
+                                                <li class="option ">
+                                                    <input type="radio" id="f-option" name="selector">
+                                                    <label for="f-option">Recommended</label>
+                                                    <div class="check"></div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="s-option" name="selector">
+                                                    <label for="s-option">New Arrivals</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="t-option" name="selector">
+                                                    <label for="t-option">Cats</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="p-option" name="selector">
+                                                    <label for="p-option">Price High to Low</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="option">
+                                                    <input type="radio" id="pl-option" name="selector">
+                                                    <label for="pl-option">Price Low to High</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-description">
-                        <h2>All the information you need is right here</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maecenas dolor sapien massa.
-                            Varius eros, eleifend nisi proin feugiat sapien ipsum. Gravida diam ac tellus ut mauris
-                            iaculis odio senectus ultrices. Commodo purus faucibus ullamcorper eget metus fames. Tortor,
-                            nec diam lacus, morbi mi blandit. Amet lacus, eget dui dui sed adipiscing et nunc. Nisl
-                            tristique proin pharetra tristique neque, mus scelerisque nisi, massa. Blandit ullamcorper
-                            enim, amet, ultrices ut cras. Vitae arcu netus tempor proin eu donec sapien ut. Blandit sed
-                            mauris et at. Imperdiet commodo, faucibus nulla in. Nisi, sollicitudin ut phasellus leo arcu
-                            cras ipsum dui. Luctus semper donec eget sollicitudin duis proin commodo neque. Sit
-                            consequat gravida est nunc turpis a, tellus diam. Dictum sit sagittis, convallis
-                            pellentesque cursus tempus bibendum at. Vitae amet, risus, tortor proin eget egestas. Amet
-                            at erat nunc nisl suspendisse. Lectus risus arcu fermentum consequat malesuada libero urna.
-                            Tortor nec donec habitant eget sit sit purus. Sed rutrum duis sed velit. Eget dignissim ac,
-                            morbi mi pretium, dolor rhoncus, pellentesque. Ac phasellus curabitur duis enim vitae. Elit
-                            lorem nisl vel ullamcorper risus aliquam sit.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maecenas dolor sapien massa.
-                            Varius eros, eleifend nisi proin feugiat sapien ipsum. Gravida diam ac tellus ut mauris
-                            iaculis odio senectus ultrices. Commodo purus faucibus ullamcorper eget metus fames. Tortor,
-                            nec diam lacus, morbi mi blandit. Amet lacus, eget dui dui sed adipiscing et nunc. Nisl
-                            tristique proin pharetra tristique neque, mus scelerisque nisi, massa. Blandit ullamcorper
-                            enim, amet, ultrices ut cras. Vitae arcu netus tempor proin eu donec sapien ut. Blandit sed
-                            mauris et at. Imperdiet commodo, faucibus nulla in. Nisi, sollicitudin ut phasellus leo arcu
-                            cras ipsum dui. Luctus semper donec eget sollicitudin duis proin commodo neque. Sit
-                            consequat gravida est nunc turpis a, tellus diam. Dictum sit sagittis, convallis
-                            pellentesque cursus tempus bibendum at. Vitae amet, risus, tortor proin eget egestas. Amet
-                            at erat nunc nisl suspendisse. Lectus risus arcu fermentum consequat malesuada libero urna.
-                            Tortor nec donec habitant eget sit sit purus. Sed rutrum duis sed velit. Eget dignissim ac,
-                            morbi mi pretium, dolor rhoncus, pellentesque. Ac phasellus curabitur duis enim vitae. Elit
-                            lorem nisl vel ullamcorper risus aliquam sit.</p>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <label class="priceTag price">Save 10%</label>
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt="slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <label class="priceTag sold">Sold out</label>
+                            <span class="like-icon">
+                                <lottie-player src="assets/js/aniamtion-icon.json" background="transparent" speed="1"
+                                    style="width: 90px; height: 90px;" loop autoplay>
+                                </lottie-player>
+                            </span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt=" slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6">
+                    <div class="browseproduct-item">
+                        <a href="#" class="browseproduct-img">
+                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
+                            <img alt="slider" class="product-img" src="assets/images/product1.png">
+                        </a>
+                        <div class="browseproduct-header">
+                            <a class="name" href="#">Hooded sweatshirt dress</a>
+                            <p>KWD 6.990</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END: page -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="mobile-nav-logo">
-                        <img src="assets/images/lakal.png">
-                    </div>
-                    <div class="modal-search">
-                        <div class="modal-search-header">
-                            <div class="search-field">
-                                <div class="input-group field-icon">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-text" id="basic-addon2">
-                                        <img alt="search" src="assets/images/search-filter.svg">
-                                    </span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-close modal-search-icon" data-bs-dismiss="modal">
-                                <img alt="search" src="assets/images/icons-close.svg">
-                            </button>
-                        </div>
-                        <div class="modal-search-result">
-                            <div class="Shop-by-category">
-                                <h1>Shop by category</h1>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-4 col-6">
-                                        <div class="category-item">
-                                            <div class="category-img">
-                                                <img alt="slider" src="assets/images/slider/women-one.png">
-                                            </div>
-                                            <div class="category-header">
-                                                <h2>Women</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-6">
-                                        <div class="category-item">
-                                            <div class="category-img">
-                                                <img alt="slider" src="assets/images/slider/menu-one.png">
-                                            </div>
-                                            <div class="category-header">
-                                                <h2>Men</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-6">
-                                        <div class="category-item">
-                                            <div class="category-img">
-                                                <img alt="slider" src="assets/images/slider/kids-one.jpg">
-                                            </div>
-                                            <div class="category-header">
-                                                <h2>Kids</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <label class="priceTag priceNew">Save 10%</label>
-                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
-                                            <img alt="slider" src="assets/images/product1.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <label class="priceTag priceNew">Save 10%</label>
-                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
-                                            <img alt="slider" src="assets/images/product2.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <label class="priceTag priceNew">Save 10%</label>
-                                            <span class="like-icon"><img src="assets/images/heart.svg"></span>
-                                            <img alt="slider" src="assets/images/product3.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
-                                            <img alt="slider" src="assets/images/product4.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
-                                            <img alt="slider" src="assets/images/product2.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
-                                            <img alt="slider" src="assets/images/product1.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
-                                            <img alt="slider" src="assets/images/product3.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-6">
-                                    <div class="browseproduct-item">
-                                        <div class="browseproduct-img">
-                                            <span class="like-icon"><img src="assets/images/heart-fill.svg"></span>
-                                            <img alt="slider" src="assets/images/product4.png">
-                                        </div>
-                                        <div class="browseproduct-header">
-                                            <h2>Hooded sweatshirt dress</h2>
-                                            <p>KWD 6.990</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="modal-action">
-                                        <button type="button" class="btn btn-secondary">
-                                            View all results
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- END: Product List -->
 
     <footer>
         <div class="footer-inner m-hidden">
@@ -1110,9 +1139,8 @@
                 </div>
             </div>
         </div>
+
     </footer>
-
-
 
     <!-- Scripts -->
     <script src="assets/js/jquery.js"></script>
@@ -1120,6 +1148,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+
     <!-- scripts -->
     <script src="assets/js/scripts.js"></script>
 </body>

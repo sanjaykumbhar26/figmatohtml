@@ -233,8 +233,10 @@ $(window).on('scroll', function () {
 (function () {
     $('.account-menu').on('click', function () {
         $('.bar2').toggleClass('animate');
+        var mobileBody = $('body');
         var mobileNav = $('.account-mobile-nav');
         mobileNav.toggleClass('hide show');
+        mobileBody.toggleClass('stop-scroll');
     })
 })();
 
