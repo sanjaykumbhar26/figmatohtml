@@ -1117,6 +1117,7 @@ button:focus {
 .browseproduct-item {
   color: #1D4F74;
   text-decoration: none;
+  margin-bottom: 15px;
 }
 
 .browseproduct-item:hover {
@@ -3863,6 +3864,7 @@ input[type='checkbox']:checked {
   font-size: 12.8px;
   line-height: 19px;
   color: #6B7888;
+  margin-bottom: 20px;
 }
 
 .product-accordion-section .accordion-body {
