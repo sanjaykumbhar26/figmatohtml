@@ -253,9 +253,11 @@ $('.sp-wrap').smoothproducts();
 
 function openCart() {
     document.getElementById("Cart").style.display = "block";
+    document.body.classList.add('stop-scroll');
 }
 function closeCart() {
     document.getElementById("Cart").style.display = "none";
+    document.body.classList.remove('stop-scroll');
 }
 
 

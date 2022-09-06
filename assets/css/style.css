@@ -4767,6 +4767,11 @@ input[type='checkbox']:checked {
 
 
 @media (max-width: 767px) {
+  .side-footer .row .col-md-6 button {
+    min-width: auto;
+    margin-bottom: 0;
+  }
+
   .payment-action {
     position: relative;
     display: flex;
