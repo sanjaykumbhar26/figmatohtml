@@ -2960,7 +2960,7 @@ input[type='checkbox']:checked {
 .bar:after,
 .bar:before {
   width: 24px;
-  height: 2px;
+  height: 1.5px;
 }
 
 .bar {
@@ -3084,7 +3084,7 @@ input[type='checkbox']:checked {
 .bar2.animate:after,
 .bar2.animate:before {
   width: 24px;
-  height: 2px;
+  height: 1.5px;
 }
 
 .bar2.animate {
@@ -4856,6 +4856,7 @@ input[type='checkbox']:checked {
     height: 24px;
     cursor: pointer;
     z-index: 111;
+    opacity: 1;
   }
 
   .payment-icon {
@@ -4957,6 +4958,7 @@ input[type='checkbox']:checked {
     height: 24px;
     cursor: pointer;
     z-index: 111;
+    opacity: 1;
   }
 
   #modalSearch .mobile-nav-logo {
@@ -5570,7 +5572,7 @@ input[type='checkbox']:checked {
 }
 
 .modalFilter-header img {
-  height: 37px;
+  height: 24px;
 }
 
 .stop-scroll {
