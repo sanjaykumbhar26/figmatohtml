@@ -117,18 +117,20 @@
                                     <div class="col-md-12">
                                         <div class="mb-24">
                                             <input class="form-check-input" type="radio" name="exampleRadios"
-                                                id="exampleRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
+                                                id="cd-card" value="option1" checked>
+                                            <label class="form-check-label" for="cd-card">
                                                 Credit / Debit Card
                                             </label>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row field-card" id="credit-debit-card">
+                                    <div class="col-md-12">
                                         <div class="mb-24">
                                             <label for="expiry" class="form-label">Expiry</label>
                                             <input type="text" class="form-control" value="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-24">
                                             <label for="expiry" class="form-label">Expiry</label>
@@ -144,9 +146,9 @@
                                 </div>
                             </div>
                             <div class="form-kent">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="knet"
                                     value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
+                                <label class="form-check-label" for="knet">
                                     K-NET
                                 </label>
                             </div>
@@ -163,6 +165,31 @@
                         </div>
                     </address>
 
+                    <div class="billing-summary-section d-hidden">
+                        <h2>Billing summary</h2>
+                        <!-- Billing summary  -->
+                        <div class="billing-summary-block">
+                            <ul>
+                                <li>
+                                    <span class="lable">Subtotal</span>
+                                    <span class="value">KWD 10.500</span>
+                                </li>
+                                <li>
+                                    <span class="lable">Promo code</span>
+                                    <span class="value error">KWD - 2.500 </span>
+                                </li>
+                                <li>
+                                    <span class="lable">Delivery fee</span>
+                                    <span class="value">KWD 2.000</span>
+                                </li>
+                            </ul>
+                            <div class="ordertotal">
+                                <span class="lable">Order total</span>
+                                <span class="value">KWD 10.500</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- payment -->
                     <div class="payment-footer">
                         <p>I confirm that I have read and accept the <a href="#">Privacy Policy</a> and <a
@@ -175,7 +202,7 @@
                 </div>
                 <div class="col-md-8">
                     <!-- BEGIN: cart items   -->
-                    <div class="cart-items-list">
+                    <div class="cart-items-list m-hidden">
                         <div class="cart-item">
                             <div class="cart-item-info">
                                 <div class="cart-item-img">
@@ -238,7 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="billing-summary-section">
+                    <div class="billing-summary-section m-hidden">
                         <h2>Billing summary</h2>
                         <!-- Billing summary  -->
                         <div class="billing-summary-block">

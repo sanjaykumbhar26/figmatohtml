@@ -143,6 +143,29 @@ $(window).load(function () {
     }
 });
 
+
+/*------------------------------------------------------
+/  radion button 
+/------------------------------------------------------*/
+$(document).ready(function () {
+    var check = $("#cd-card").prop("checked");
+    if (check) {
+        $("#credit-debit-card").addClass("activeTab");
+    }
+
+    $("#cd-card").on("click", function () {
+        check = $(this).prop("checked");
+        $("#credit-debit-card").addClass("activeTab");
+    })
+
+    $("#knet").on("click", function () {
+        check = $(this).prop("checked");
+        $("#credit-debit-card").removeClass("activeTab");
+    })
+
+});
+
+
 /*--------------------------------------------------------
 / 6. form header
 /----------------------------------------------------------*/

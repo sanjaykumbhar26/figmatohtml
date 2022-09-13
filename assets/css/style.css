@@ -4767,6 +4767,17 @@ input[type='checkbox']:checked {
 
 
 @media (max-width: 767px) {
+
+  .checkout-section .payment-footer {
+    position: sticky;
+    bottom: 0px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+
+
   .side-footer .row .col-md-6 button {
     min-width: auto;
     margin-bottom: 0;
@@ -5649,4 +5660,12 @@ input[type='checkbox']:checked {
   line-height: 19px;
   color: #6B7888;
   margin-top: 8px;
+}
+
+.field-card.activeTab {
+  display: block;
+}
+
+.field-card {
+  display: none;
 }
